@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity: Water – Water Changes Everything</title>
+  <style>
+    :root {
+      --brand-yellow: #F4CD38; /* logo background */
+      --brand-light: #E6F2F8; /* hero left background */
+      --brand-dark: #000000;  /* primary text/button */
+    }
+    /* Reset & base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.5;
+      color: var(--brand-dark);
+    }
+
+    /* ==== Header ====*/
+    header {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid var(--brand-dark);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-transform: lowercase;
+      letter-spacing: 0.05em;
+    }
+    .logo-icon {
+      background: var(--brand-yellow);
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==== Hero Section ====*/
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .hero-left {
+      flex: 1 1 400px;
+      padding: 3rem 2rem;
+      background: var(--brand-light);
+      position: relative;
+    }
+    /* subtle blue wave pattern */
+    .hero-left::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(155deg, transparent 0 20px, rgba(0, 80, 160, 0.1) 20px 24px);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-left h1 {
+      font-size: 3rem;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    .hero-left p {
+      margin-bottom: 2rem;
+      max-width: 45ch;
+    }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--brand-dark);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background 0.2s ease-in-out;
+    }
+    .btn:hover {
+      background: #333333;
+    }
+
+    .hero-right {
+      flex: 1 1 400px;
+      min-height: 400px;
+      background: url('hero-placeholder.jpg') center/cover no-repeat;
+    }
+
+    /* ==== Responsive tweaks ==== */
+    @media (max-width: 768px) {
+      .hero-left h1 {
+        font-size: 2.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <div class="logo">
+      <img src="images/jerry_can_yellow.png" alt="charity: water logo" style="width:30px;height:40px;border-radius:6px;" />
+      <span>charity: water</span>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Water Changes Everything.</h1>
+      <p>
+        By donating, you will directly help us fund clean water projects for rural communities in El Salvador, Cuba, Africa, Pakistan, India, and Cambodia. 100% of your donation goes straight towards funding our mission to bring water to those in need.
+      </p>
+      <a href="#" class="btn">Join Us Today</a>
+    </div>
+    <div class="hero-right" role="img" aria-label="Woman carrying water container through arid land">
+    <img src="images/7730_Ethiopia_2019_CG-.jpg" alt="woman walking through arid desert" style="width:100%;height:auto;" />
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer style="text-align: center; padding: 2rem; background: var(--brand-light);">
+    <p>&copy; 2025 charity: water. All rights reserved.</p>
+    <p>Follow us on <a href="#" style="color: var(--brand-dark);">Twitter</a>, <a href="#" style="color: var(--brand-dark);">Facebook</a>, and <a href="#" style="color: var(--brand-dark);">Instagram</a>.</p>
+  </footer>
+
+</body>
+</html>
